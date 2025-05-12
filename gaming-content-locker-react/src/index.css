@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.container-custom {
+  @apply container max-w-6xl px-4 mx-auto;
+}
+
+.section-title {
+  @apply text-center text-3xl md:text-4xl font-bold mb-8;
+}
+
+.highlight {
+  @apply text-[#00f7ff];
+}
+
+.nav-link {
+  @apply text-muted-foreground hover:text-[#00f7ff] transition-colors;
+}
+
+.mobile-nav-link {
+  @apply text-lg hover:text-[#00f7ff] transition-colors py-2 border-b border-[#00f7ff]/10;
+}
+
+.btn-primary {
+  @apply bg-[#00f7ff] text-black hover:bg-[#00f7ff]/80 transition-colors;
+}
+
+/* Content Locker Dialog styling */
+.content-locker-dialog {
+  @apply border-[#00f7ff]/20 bg-card/70 backdrop-blur-lg;
+}
+
+/* Game Card styling */
+.card-hover {
+  @apply hover:border-[#00f7ff]/40 hover:shadow-[0_0_20px_rgba(0,247,255,0.2)];
+}
+
+/* Text glow effect */
+.glow-text {
+  text-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+}
+
+/* Shine effect for buttons */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    top: -100%;
+  }
+  20%, 100% {
+    left: 100%;
+    top: 100%;
+  }
+}
+
+/* Animations for staggered content */
+.animation-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animation-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1200ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4000ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blob animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.1);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.animate-blob {
+  animation: blob 15s ease-in-out infinite;
+}
+
+/* Controller button press animation */
+@keyframes buttonPress {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+.controller-button-press {
+  animation: buttonPress 2s ease-in-out infinite;
+}
+
+/* Floating animation for gamepad icon */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulsing glow animation */
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(0, 247, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 247, 255, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(0, 247, 255, 0.3));
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Screenshot gallery styles */
+.screenshot-container {
+  @apply relative overflow-hidden rounded-lg bg-black/20 backdrop-blur-sm border border-[#00f7ff]/20;
+  height: 70vh;
+  max-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .screenshot-container {
+    height: 50vh;
+    max-height: 400px;
+  }
+}
+
+.portrait-img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.landscape-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Thumbnail navigation */
+.thumbnail-container {
+  @apply flex flex-wrap gap-2 justify-center mt-4 px-2;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 247, 255, 0.3) transparent;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 247, 255, 0.3);
+  border-radius: 10px;
+}
+
+.thumbnail {
+  @apply rounded overflow-hidden border-2 border-transparent flex-shrink-0 transition-all duration-200;
+  width: 70px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail.active, .thumbnail:hover {
+  @apply border-[#00f7ff] shadow-[0_0_8px_rgba(0,247,255,0.5)];
+  transform: scale(1.05);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

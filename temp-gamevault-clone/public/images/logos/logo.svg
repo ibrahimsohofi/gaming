@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" fill="none">
+  <!-- Background -->
+  <rect width="300" height="300" rx="15" fill="#0A0E1A"/>
+
+  <!-- Circuit Pattern Background -->
+  <g opacity="0.3">
+    <path d="M30 30 L50 30 L50 50 L70 50 L70 70 L90 70" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M120 30 L140 30 L140 50 L160 50" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M200 30 L220 30 L220 50 L240 50 L240 70" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M30 90 L50 90 L50 110 L70 110" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M160 90 L180 90 L180 110 L200 110 L200 130" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M30 160 L50 160 L50 180 L70 180 L70 200" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M110 160 L130 160 L130 180 L150 180" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M210 160 L230 160 L230 180 L250 180 L250 200" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M30 230 L50 230 L50 250 L70 250" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M120 230 L140 230 L140 250 L160 250 L160 270" stroke="#05D9E8" stroke-width="1"/>
+    <path d="M220 230 L240 230 L240 250" stroke="#05D9E8" stroke-width="1"/>
+
+    <!-- Circuit Nodes -->
+    <circle cx="30" cy="30" r="3" fill="#05D9E8"/>
+    <circle cx="50" cy="50" r="3" fill="#05D9E8"/>
+    <circle cx="90" cy="70" r="3" fill="#05D9E8"/>
+    <circle cx="120" cy="30" r="3" fill="#05D9E8"/>
+    <circle cx="160" cy="50" r="3" fill="#05D9E8"/>
+    <circle cx="200" cy="30" r="3" fill="#05D9E8"/>
+    <circle cx="240" cy="70" r="3" fill="#05D9E8"/>
+    <circle cx="30" cy="90" r="3" fill="#05D9E8"/>
+    <circle cx="70" cy="110" r="3" fill="#05D9E8"/>
+    <circle cx="160" cy="90" r="3" fill="#05D9E8"/>
+    <circle cx="200" cy="130" r="3" fill="#05D9E8"/>
+    <circle cx="30" cy="160" r="3" fill="#05D9E8"/>
+    <circle cx="70" cy="200" r="3" fill="#05D9E8"/>
+    <circle cx="110" cy="160" r="3" fill="#05D9E8"/>
+    <circle cx="150" cy="180" r="3" fill="#05D9E8"/>
+    <circle cx="210" cy="160" r="3" fill="#05D9E8"/>
+    <circle cx="250" cy="200" r="3" fill="#05D9E8"/>
+    <circle cx="30" cy="230" r="3" fill="#05D9E8"/>
+    <circle cx="70" cy="250" r="3" fill="#05D9E8"/>
+    <circle cx="120" cy="230" r="3" fill="#05D9E8"/>
+    <circle cx="160" cy="270" r="3" fill="#05D9E8"/>
+    <circle cx="220" cy="230" r="3" fill="#05D9E8"/>
+    <circle cx="240" cy="250" r="3" fill="#05D9E8"/>
+  </g>
+
+  <!-- Controller Body -->
+  <g>
+    <path d="M85 120 C85 110 90 100 100 95 L200 95 C210 100 215 110 215 120 L215 180 C215 195 200 200 185 200 L115 200 C100 200 85 195 85 180 L85 120Z" fill="#151A30" stroke="#05D9E8" stroke-width="3"/>
+
+    <!-- Controller D-Pad -->
+    <rect x="105" y="135" width="30" height="10" rx="2" fill="#05D9E8"/>
+    <rect x="115" y="125" width="10" height="30" rx="2" fill="#05D9E8"/>
+
+    <!-- Controller Buttons -->
+    <circle cx="175" cy="145" r="7" fill="#FF2A6D"/>
+    <circle cx="190" cy="130" r="7" fill="#05D9E8"/>
+    <circle cx="160" cy="130" r="7" fill="#D1F7FF"/>
+    <circle cx="175" cy="115" r="7" fill="#05D9E8"/>
+
+    <!-- Controller Shoulder Buttons -->
+    <path d="M95 95 C95 90 100 85 105 85 L120 85 C125 85 130 90 130 95" stroke="#05D9E8" stroke-width="3" fill="none"/>
+    <path d="M170 95 C170 90 175 85 180 85 L195 85 C200 85 205 90 205 95" stroke="#05D9E8" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Padlock -->
+  <g>
+    <!-- Lock Body -->
+    <rect x="125" y="150" width="50" height="40" rx="5" fill="#151A30" stroke="#05D9E8" stroke-width="3"/>
+
+    <!-- Lock Shackle -->
+    <path d="M135 150 L135 135 C135 125 145 120 150 120 C155 120 165 125 165 135 L165 150" stroke="#05D9E8" stroke-width="3" fill="none"/>
+
+    <!-- Lock Keyhole -->
+    <circle cx="150" cy="165" r="8" fill="#0A0E1A" stroke="#05D9E8" stroke-width="2"/>
+    <rect x="148" y="165" width="4" height="12" fill="#0A0E1A" stroke="#05D9E8" stroke-width="1"/>
+  </g>
+
+  <!-- Glow Effects -->
+  <g filter="url(#glow)">
+    <path d="M85 120 C85 110 90 100 100 95 L200 95 C210 100 215 110 215 120 L215 180 C215 195 200 200 185 200 L115 200 C100 200 85 195 85 180 L85 120Z" stroke="#05D9E8" stroke-width="1"/>
+    <rect x="125" y="150" width="50" height="40" rx="5" stroke="#05D9E8" stroke-width="1"/>
+  </g>
+
+  <!-- Text -->
+  <text x="150" y="240" fill="#05D9E8" font-family="Arial, sans-serif" font-weight="bold" font-size="24" text-anchor="middle">GAMEVAULT</text>
+
+  <!-- Filters -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+</svg>

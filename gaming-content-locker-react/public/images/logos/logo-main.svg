@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none">
+  <!-- Dark Navy Background -->
+  <rect width="800" height="800" rx="20" fill="#0A0E1A"/>
+
+  <!-- Hexagonal Grid Background -->
+  <g opacity="0.15">
+    <!-- Horizontal Grid Lines -->
+    <path d="M50 100 L750 100" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M50 200 L750 200" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M50 300 L750 300" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M50 400 L750 400" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M50 500 L750 500" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M50 600 L750 600" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M50 700 L750 700" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+
+    <!-- Vertical Grid Lines -->
+    <path d="M100 50 L100 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M200 50 L200 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M300 50 L300 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M400 50 L400 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M500 50 L500 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M600 50 L600 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+    <path d="M700 50 L700 750" stroke="#05D9E8" stroke-width="1" stroke-dasharray="20 10"/>
+
+    <!-- Hexagonal Grid Patterns -->
+    <path d="M200 150 L250 125 L300 150 L300 200 L250 225 L200 200 Z" stroke="#05D9E8" stroke-width="1" fill="none"/>
+    <path d="M500 150 L550 125 L600 150 L600 200 L550 225 L500 200 Z" stroke="#05D9E8" stroke-width="1" fill="none"/>
+    <path d="M200 550 L250 525 L300 550 L300 600 L250 625 L200 600 Z" stroke="#05D9E8" stroke-width="1" fill="none"/>
+    <path d="M500 550 L550 525 L600 550 L600 600 L550 625 L500 600 Z" stroke="#05D9E8" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Main Hexagonal Vault Door -->
+  <g filter="url(#glow)">
+    <path d="M400 150 L580 250 L580 550 L400 650 L220 550 L220 250 Z" fill="#151A30" stroke="#05D9E8" stroke-width="8"/>
+  </g>
+
+  <!-- Inner Hexagonal Details -->
+  <path d="M400 200 L530 280 L530 520 L400 600 L270 520 L270 280 Z" fill="none" stroke="#05D9E8" stroke-width="3" stroke-dasharray="10 5"/>
+
+  <!-- Circuit Patterns Radiating Outward -->
+  <g opacity="0.7">
+    <!-- Top Left Circuit -->
+    <path d="M220 250 L180 250 L180 200 L150 200" stroke="#05D9E8" stroke-width="2"/>
+    <circle cx="150" cy="200" r="5" fill="#05D9E8"/>
+
+    <!-- Top Right Circuit -->
+    <path d="M580 250 L620 250 L620 200 L650 200" stroke="#05D9E8" stroke-width="2"/>
+    <circle cx="650" cy="200" r="5" fill="#05D9E8"/>
+
+    <!-- Bottom Left Circuit -->
+    <path d="M220 550 L180 550 L180 600 L150 600" stroke="#05D9E8" stroke-width="2"/>
+    <circle cx="150" cy="600" r="5" fill="#05D9E8"/>
+
+    <!-- Bottom Right Circuit -->
+    <path d="M580 550 L620 550 L620 600 L650 600" stroke="#05D9E8" stroke-width="2"/>
+    <circle cx="650" cy="600" r="5" fill="#05D9E8"/>
+
+    <!-- Top Circuit -->
+    <path d="M400 150 L400 120 L430 120" stroke="#05D9E8" stroke-width="2"/>
+    <circle cx="430" cy="120" r="5" fill="#05D9E8"/>
+
+    <!-- Bottom Circuit -->
+    <path d="M400 650 L400 680 L430 680" stroke="#05D9E8" stroke-width="2"/>
+    <circle cx="430" cy="680" r="5" fill="#05D9E8"/>
+  </g>
+
+  <!-- D-Pad Design at Center -->
+  <g>
+    <!-- Central Circle -->
+    <circle cx="400" cy="400" r="60" fill="#0A0E1A" stroke="#05D9E8" stroke-width="4"/>
+
+    <!-- D-Pad Horizontal -->
+    <rect x="320" y="390" width="160" height="20" rx="5" fill="#05D9E8"/>
+
+    <!-- D-Pad Vertical -->
+    <rect x="390" y="320" width="20" height="160" rx="5" fill="#05D9E8"/>
+
+    <!-- Subtle Glow -->
+    <circle cx="400" cy="400" r="65" stroke="#05D9E8" stroke-width="1" opacity="0.6" fill="none" filter="url(#dpadGlow)"/>
+  </g>
+
+  <!-- Digital Distortion Effect -->
+  <g opacity="0.3">
+    <rect x="350" y="380" width="100" height="5" fill="#05D9E8">
+      <animate attributeName="x" values="350;355;350" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="390" y="350" width="5" height="100" fill="#05D9E8">
+      <animate attributeName="y" values="350;355;350" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Text -->
+  <text x="400" y="750" fill="#05D9E8" font-family="'Orbitron', sans-serif" font-weight="bold" font-size="60" text-anchor="middle" filter="url(#textGlow)">GAMEVAULT</text>
+
+  <!-- Glowing Effect Filters -->
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="dpadGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="textGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+</svg>
